@@ -9,18 +9,14 @@ This xml files will help you to create GWT apps and manage their dependencies wi
 2. Copy the build.xml, `ivy-setting.xml` and `ivy.xml` to the root of the project.
 
 3. Alter build.xml to your prefered project name and module name. Basically, you need to change these lines by something like this:
+
 `
-\<project name="gwt-bree" xmlns:ivy="antlib:org.apache.ivy.ant" default="build" basedir=".">
-<br />
-<!-- some code -->
-<br />
-   \<property name="application.module" value="com.geekvigarista.gwt.ivy.Gwt_bree" />
-<br />
-   \<property name="application.name" value="gwtbree" />
-<br />
-   \<!-- some code -->
-<br />
-\<project>
+project name="gwt-bree" xmlns:ivy="antlib:org.apache.ivy.ant" default="build" basedir="."
+!-- some code --
+   property name="application.module" value="com.geekvigarista.gwt.ivy.Gwt_bree" /
+   property name="application.name" value="gwtbree" /
+   !-- some code --
+/project
 `
 
 In this example I changed the *gwt-ivy* default name by *gwt-bree*, thats also a real app managed by [gwt-bree](https://github.com/caarlos0/gwt-bree).
