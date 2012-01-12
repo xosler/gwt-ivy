@@ -12,6 +12,7 @@ This xml files will help you to create GWT apps and manage their dependencies wi
 
 `
 <project name="gwt-bree" xmlns:ivy="antlib:org.apache.ivy.ant" default="build" basedir=".">
+    
     <!-- some code -->
 
     <property name="application.module" value="com.geekvigarista.gwt.ivy.Gwt_bree" />
