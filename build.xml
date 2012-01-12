@@ -19,7 +19,9 @@
 	<ivy:settings file="ivy-settings.xml" id="ivy.instance" />
 	
 	<!-- ALSO, CHANGE YOUR MODULE PKG AND NAME HERE!! -->
-	<property name="application.module" value="com.geekvigarista.gwt.ivy.Gwt_ivy" />
+        <property name="application.module" value="com.geekvigarista.gwt.ivy.Gwt_ivy" />
+        <property name="application.name" value="gwtbree" />
+        <property name="application.war" value="${application.name}.war" />
 
 	<target name="download-ivy" unless="offline">
 		<mkdir dir="${ivy.jar.dir}" />
@@ -85,13 +87,13 @@
 
 	<target name="build" depends="gwtc" description="Build this project" />
 	<target name="war" depends="build" description="Create a war file">
-		<zip destfile="gwt-ivy.war" basedir="war" />
+            <zip destfile="${application.war}" basedir="war" />
 	</target>
 
 	<target name="clean" description="Cleans this project">
 		<delete dir="war/WEB-INF/classes" failonerror="false" />
 		<delete dir="war/WEB-INF/lib" failonerror="false" />
-		<delete dir="war/gwtivy" failonerror="false" />
+                <delete dir="war/${application.name}" failonerror="false" />
 		<!-- <delete dir="lib" failonerror="false" /> -->
 	</target>
 </project>
